@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 import fr.pepintrie.irrigapli.R;
@@ -27,9 +28,17 @@ public class MainActivity extends AppCompatActivity {
         mAddFertilisation = findViewById(R.id.main_button_add_fertilisation);
         mShowData = findViewById(R.id.main_button_show_data);
 
+
+        /////////////////////SET LISTENER///////////////////////////////////////////////////////////
+
         //add rain fall
-        Intent AddRainFallActivityIntent = new Intent(MainActivity.this, AddRainFallActivity.class);
-        startActivity(AddRainFallActivityIntent);
+        mAddRainFall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent AddRainFallActivityIntent = new Intent(MainActivity.this, AddRainFallActivity.class);
+                startActivity(AddRainFallActivityIntent);
+            }
+        });
 
         //calc irrifation
 
