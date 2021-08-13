@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,11 +12,8 @@ import android.widget.TextView;
 
 import java.util.Date;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-
 import fr.pepintrie.irrigapli.R;
-import fr.pepintrie.irrigapli.model.RainFall;
+import fr.pepintrie.irrigapli.model.data.RainFall;
 
 public class AddRainFallActivity extends AppCompatActivity {
 

@@ -40,7 +40,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //calc irrifation
+        //calc irrigation
+
+        mCalcIrrigation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent AddIrrigationActivityIntent = new Intent(MainActivity.this, AddIrrigationActivity.class);
+                startActivity(AddIrrigationActivityIntent);
+            }
+        });
 
         //modify planches
 
