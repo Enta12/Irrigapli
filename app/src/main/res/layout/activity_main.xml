@@ -40,7 +40,7 @@
         android:layout_margin="16dp"
         android:text="Calculer une irrigation" />
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/main_button_add_fertilisation"
+        android:id="@+id/main_button_add_fertilize"
         android:layout_width="wrap_content"
         android:background="@color/primary"
         android:layout_height="wrap_content"

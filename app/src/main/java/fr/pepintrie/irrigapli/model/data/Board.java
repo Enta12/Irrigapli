@@ -2,6 +2,7 @@ package fr.pepintrie.irrigapli.model.data;
 
 public class Board {
 
+    private int mNbNeededFertilize;
     private String mName;
     private int mNeed;
     private int mNbSprinckler;
@@ -22,6 +23,8 @@ public class Board {
     public int getNeed(){
         return mNeed;
     }
+
+    public int getNbNeededFertilize() { return mNbNeededFertilize; }
 
     public int getSize(){
         return mSize;

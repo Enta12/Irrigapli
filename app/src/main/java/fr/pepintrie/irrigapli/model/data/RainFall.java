@@ -11,4 +11,6 @@ public class RainFall {
         this.mMm = mm;
         this.mDate =date;
     }
+
+
 }

@@ -9,11 +9,11 @@ import android.widget.Button;
 
 import fr.pepintrie.irrigapli.R;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     private Button mAddRainFall;
     private Button mCalcIrrigation;
     private Button mModifyPlanches;
-    private Button mAddFertilisation;
+    private Button mAddFertilize;
     private Button mShowData;
 
     @Override
@@ -25,35 +25,36 @@ public class MainActivity extends AppCompatActivity {
         mAddRainFall = findViewById(R.id.main_button_add_rainfall);
         mCalcIrrigation = findViewById(R.id.main_button_calc_irrigation);
         mModifyPlanches = findViewById(R.id.main_button_modify_plan);
-        mAddFertilisation = findViewById(R.id.main_button_add_fertilisation);
+        mAddFertilize = findViewById(R.id.main_button_add_fertilize);
         mShowData = findViewById(R.id.main_button_show_data);
 
 
         /////////////////////SET LISTENER///////////////////////////////////////////////////////////
 
         //add rain fall
-        mAddRainFall.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent AddRainFallActivityIntent = new Intent(MainActivity.this, AddRainFallActivity.class);
-                startActivity(AddRainFallActivityIntent);
-            }
-        });
+        mAddRainFall.setOnClickListener(this);
+        mCalcIrrigation.setOnClickListener(this);
 
+    }
+
+    @Override
+    public void onClick(View v) {
+        //add rain fall
+        if(v == mAddRainFall){
+            Intent AddRainFallActivityIntent = new Intent(MainActivity.this, AddRainFallActivity.class);
+            startActivity(AddRainFallActivityIntent);
+        }
         //calc irrigation
-
-        mCalcIrrigation.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent AddIrrigationActivityIntent = new Intent(MainActivity.this, AddIrrigationActivity.class);
-                startActivity(AddIrrigationActivityIntent);
-            }
-        });
-
+        else if(v == mCalcIrrigation){
+            Intent AddIrrigationActivityIntent = new Intent(MainActivity.this, AddIrrigationActivity.class);
+            startActivity(AddIrrigationActivityIntent);
+        }
+        //add fertilize
+        else if(v == mAddFertilize){
+            Intent AddFertilizeActivityIntent = new Intent(MainActivity.this, AddFertilizeActivity.class);
+            startActivity(AddFertilizeActivityIntent);
+        }
         //modify planches
-
-        //add fertilisation
-
         //show data
 
     }
